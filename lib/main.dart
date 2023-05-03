@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'menu.dart';
+import 'package:money_tracker/pages/menu.dart';
 
 void main() {
   runApp(const MyApp());
