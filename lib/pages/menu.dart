@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:money_tracker/pages/menu.dart';
 import 'package:money_tracker/widgets/drawer.dart';
 import 'package:money_tracker/pages/form.dart';
+import 'package:flutter/material.dart';
+import 'package:money_tracker/pages/menu.dart';
+import 'package:money_tracker/pages/login.dart';
+import 'package:provider/provider.dart';
+import 'package:pbp_django_auth/pbp_django_auth.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -51,7 +56,7 @@ class MyHomePage extends StatelessWidget {
                 shrinkWrap: true,
                 children: <Widget>[
                   Material(
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 119, 81, 224),
                     child: InkWell( // Area responsive terhadap sentuhan
                       onTap: () {
                         // Memunculkan SnackBar ketika diklik
@@ -84,7 +89,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ),
                   Material(
-                    color: Colors.green,
+                    color: Color.fromARGB(255, 217, 82, 23),
                     child: InkWell(
                       onTap: () {
                       Navigator.pushReplacement(
@@ -161,4 +166,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
