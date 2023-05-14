@@ -5,15 +5,6 @@ import 'package:provider/provider.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:money_tracker/pages/transaction.dart';
 import 'dart:convert';
-import 'package:flutter/material.dart';
-import 'package:money_tracker/pages/menu.dart';
-import 'package:money_tracker/widgets/drawer.dart';
-import 'package:money_tracker/pages/form.dart';
-import 'package:flutter/material.dart';
-import 'package:money_tracker/pages/menu.dart';
-import 'package:money_tracker/pages/login.dart';
-import 'package:provider/provider.dart';
-import 'package:pbp_django_auth/pbp_django_auth.dart';
 
 class MyFormPage extends StatefulWidget {
   const MyFormPage({Key? key}) : super(key: key);
@@ -190,7 +181,7 @@ class _MyFormPageState extends State<MyFormPage> {
                       // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
                       final response = await request.postJson(
                           "https://django-tutorial-production-2892.up.railway.app/tracker/create-flutter/",
-                          convert.jsonEncode(<String, String>{
+                          jsonEncode(<String, String>{
                             'name': _namaTransaksi,
                             'type': tipeTransaksi,
                             'amount': jumlahTransaksi.toString(),
