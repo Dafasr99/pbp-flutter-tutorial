@@ -2,6 +2,7 @@ import 'package:money_tracker/pages/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:pbp_django_auth/pbp_django_auth.dart';
 import 'package:provider/provider.dart';
+import '../widgets/drawer.dart';
 
 void main() {
     runApp(const LoginApp());
@@ -40,6 +41,7 @@ class _LoginPageState extends State<LoginPage> {
             appBar: AppBar(
                 title: const Text('Login'),
             ),
+            drawer: const DrawerMenu(), // Menambahkan drawer pada halaman
             body: Container(
                 padding: const EdgeInsets.all(16.0),
                 child: Column(
@@ -67,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
 
                                 // Cek kredensial
                                 // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
-                                final response = await request.login("https://<APP_URL_KAMU>/auth/login/", {
+                                final response = await request.login("http://127.0.0.1:8000/auth/login/", {
                                 'username': username,
                                 'password': password,
                                 });
