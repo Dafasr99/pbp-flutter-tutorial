@@ -15,11 +15,10 @@ class _TransactionPageState extends State<TransactionPage> {
 Future<List<TransactionRecord>> fetchTransactionRecord() async {
     // TODO: Ganti URL dan jangan lupa tambahkan trailing slash (/) di akhir URL!
     var url = Uri.parse(
-        'http://127.0.0.1:8000/tracker/json/');
+        'https://money-tracker.domcloud.io/tracker/json/');
     var response = await http.get(
         url,
         headers: {
-            "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
         },
     );

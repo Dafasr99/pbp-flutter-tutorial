@@ -178,7 +178,7 @@ class _MyFormPageState extends State<MyFormPage> {
                           if (_formKey.currentState!.validate()) {
                             // Memunculkan data (di sini)
                             final response = await request.postJson(
-                            "http://127.0.0.1:8000/tracker/create-flutter/",
+                            "https://money-tracker.domcloud.io/tracker/create-flutter/",
                             convert.jsonEncode(<String, String>{
                                 'name': _namaTransaksi,
                                 'type': tipeTransaksi,
